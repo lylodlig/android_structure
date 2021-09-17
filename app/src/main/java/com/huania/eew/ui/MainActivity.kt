@@ -14,6 +14,7 @@ import kotlinx.coroutines.launch
 class MainActivity : BaseVMActivity<MainViewModel, TestBinding>() {
     override fun getLayoutId(): Int = R.layout.test
     override fun initActivity(savedInstanceState: Bundle?) {
+
         askForPermissions(Permission.CAMERA, Permission.WRITE_EXTERNAL_STORAGE) {
             logD("${it.isAllGranted(Permission.CAMERA)}")
         }

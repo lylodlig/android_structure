@@ -1,3 +1,12 @@
 package com.huania.eew.data.bean
 
-data class Response<out T>(val code: Int, val msg: String, val data: T)
+import kotlin.properties.Delegates
+
+class Response<out T> {
+    private val code by Delegates.notNull<Int>()
+    val msg by Delegates.notNull<String>()
+    val data: T? = null
+
+    val success
+        get() = code==0
+}

@@ -11,7 +11,9 @@ class RetrofitClient private constructor(hostType: Int) : BaseRetrofitClient() {
     companion object {
         @Volatile
         private var instance: RetrofitClient? = null
-        fun getInStance(hostType: Int) = instance ?: synchronized(this) {
+
+        @JvmOverloads
+        fun getInStance(hostType: Int = 0) = instance ?: synchronized(this) {
             instance ?: RetrofitClient(hostType).also { instance = it }
         }
 
