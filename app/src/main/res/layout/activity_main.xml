@@ -1,0 +1,250 @@
+<?xml version="1.0" encoding="utf-8"?>
+<layout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools">
+
+    <data>
+
+    </data>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@mipmap/bg"
+        tools:context=".ui.MainActivity">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@mipmap/bgframe" />
+
+        <ImageView
+            android:id="@+id/ivMap"
+            android:layout_width="526.5dp"
+            android:layout_height="451.5dp"
+            android:layout_marginLeft="64dp"
+            android:background="@mipmap/map"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:layout_width="369.5dp"
+            android:layout_height="311dp"
+            android:layout_marginLeft="57.5dp"
+            android:layout_marginTop="61.5dp"
+            android:background="@mipmap/map_point"
+            app:layout_constraintLeft_toLeftOf="@+id/ivMap"
+            app:layout_constraintTop_toTopOf="@id/ivMap" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:text="地震预警接收终端"
+            android:textColor="#fffefefe"
+            android:textSize="12sp"
+            app:layout_constraintLeft_toLeftOf="parent"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="9dp"
+            android:layout_marginRight="170dp"
+            android:text="2019-06-18 19:17:34"
+            android:textColor="#ffe2e2e2"
+            android:textSize="9sp"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+
+        <ImageView
+            android:id="@+id/iv1"
+            android:layout_width="306dp"
+            android:layout_height="3.5dp"
+            android:layout_marginTop="40dp"
+            app:layout_constraintLeft_toRightOf="@+id/ivMap"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="299dp"
+            android:layout_height="wrap_content"
+            android:background="#1D1D1D"
+            app:layout_constraintLeft_toRightOf="@+id/ivMap"
+            app:layout_constraintRight_toRightOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/iv1">
+
+            <TextView
+                android:id="@+id/tv1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="14dp"
+                android:text="最新记录"
+                android:textColor="#fffefefe"
+                android:textSize="14sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="15dp"
+                android:text="信息来源：大陆地震预警中心"
+                android:textColor="#fffefefe"
+                android:textSize="9sp"
+                app:layout_constraintBottom_toBottomOf="@+id/tv1"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv1" />
+
+            <ImageView
+                android:id="@+id/iv2"
+                android:layout_width="269dp"
+                android:layout_height="4.5dp"
+                android:layout_marginTop="8dp"
+                android:background="@mipmap/divider"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv1" />
+
+            <View
+                android:id="@+id/view2"
+                android:layout_width="3dp"
+                android:layout_height="11.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="17dp"
+                android:background="#C3C3C3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv2" />
+
+            <TextView
+                android:id="@+id/tvName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.5dp"
+                android:text="四川长宁"
+                android:textColor="#fffefefe"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/view2"
+                app:layout_constraintLeft_toRightOf="@+id/view2"
+                app:layout_constraintTop_toTopOf="@id/view2" />
+
+            <TextView
+                android:id="@+id/tvLoc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:text="E104.0 N28.4"
+                android:textColor="#fffefefe"
+                android:textSize="9sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tvName"
+                app:layout_constraintTop_toBottomOf="@+id/tvName" />
+
+            <TextView
+                android:id="@+id/tvMag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="13dp"
+                android:text="6.1级"
+                android:textColor="#fffefefe"
+                android:textSize="25sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tvLoc"
+                app:layout_constraintTop_toBottomOf="@+id/tvLoc" />
+
+            <TextView
+                android:id="@+id/tvStart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="9dp"
+                android:text="发震时刻   2019-06-17 22:55:44"
+                android:textColor="#fffefefe"
+                android:textSize="9sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tvMag"
+                app:layout_constraintTop_toBottomOf="@+id/tvMag" />
+
+            <ImageView
+                android:id="@+id/iv3"
+                android:layout_width="269dp"
+                android:layout_height="1.5dp"
+                android:layout_marginTop="14dp"
+                android:background="@mipmap/divider2"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintRight_toRightOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvStart" />
+
+            <View
+                android:id="@+id/view3"
+                android:layout_width="3dp"
+                android:layout_height="11.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginTop="15.5dp"
+                android:background="#C3C3C3"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/iv3" />
+
+            <TextView
+                android:id="@+id/tv2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="7.5dp"
+                android:text="预警区域"
+                android:textColor="#fffefefe"
+                android:textSize="14sp"
+                app:layout_constraintBottom_toBottomOf="@id/view3"
+                app:layout_constraintLeft_toRightOf="@+id/view3"
+                app:layout_constraintTop_toTopOf="@id/view3" />
+
+            <TextView
+                android:id="@+id/tvLocation"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="22dp"
+                android:text="宜宾市翠屏区"
+                android:textColor="#fffefefe"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tv2"
+                app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+            <TextView
+                android:id="@+id/tvCount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="176.5dp"
+                android:layout_marginTop="22dp"
+                android:text="预警时间"
+                android:textColor="#fffefefe"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tv2" />
+
+            <TextView
+                android:id="@+id/tvDis"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="24dp"
+                android:text="震中距"
+                android:textColor="#fffefefe"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="@+id/tvLocation"
+                app:layout_constraintTop_toBottomOf="@+id/tvLocation" />
+
+            <TextView
+                android:id="@+id/tvIntensity"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="176.5dp"
+                android:layout_marginTop="24dp"
+                android:text="预估烈度"
+                android:textColor="#fffefefe"
+                android:textSize="11sp"
+                app:layout_constraintLeft_toLeftOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/tvCount" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</layout>
