@@ -1,4 +1,4 @@
-package com.huania.eew.utils
+package com.huania.eew.data
 
 import com.tencent.mmkv.MMKV
 
